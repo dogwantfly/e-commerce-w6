@@ -1,0 +1,35 @@
+.product-detail{
+    @include pc{
+        max-width: 960px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    @media (min-width: 1200px){
+        max-width: 1140px;
+    }
+}
+.detail-img{
+    min-height: 360px;
+    border-radius: 2px;
+    @include pad{
+        min-height: 400px;
+    }
+}
+.detail-info{
+    top: -35px;
+    max-width: 90%;
+    margin: 0 auto;
+   
+    @include pc{
+        max-width: auto;
+        position: relative;
+        z-index: 2;
+        left: -110px;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}

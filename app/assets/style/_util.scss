@@ -1,0 +1,139 @@
+//font
+.font-family-raleway{
+  font-family: 'Raleway', sans-serif;
+}
+.font-size-sm{
+  font-size: $font-size-sm;
+}
+.font-size-base{
+  font-size: $font-size-base;
+}
+.font-size-md{
+  font-size: $font-size-md;
+}
+.font-size-lg{
+  font-size: $font-size-lg;
+}
+.font-size-xl{
+  font-size: $font-size-xl;
+}
+.font-size-xxl{
+  font-size: $font-size-xxl;
+}
+.font-size-md-base{
+  @include pad {
+    font-size: $font-size-base;
+  }
+}
+.font-size-lg-base{
+  @include pad {
+    font-size: $font-size-base;
+  }
+}
+.font-size-md-md{
+  @include pad {
+    font-size: $font-size-md;
+  }
+}
+.font-size-md-xl{
+  @include pad {
+    font-size: $font-size-xl;
+  }
+}
+.font-size-lg-lg{
+  @include pc {
+    font-size: $font-size-lg;
+  }
+}
+.font-size-md-xxl{
+  @include pad {
+    font-size: $font-size-xxl;
+  }
+}
+.font-size-lg-xxl{
+  @include pc {
+    font-size: $font-size-xxl;
+  }
+}
+.line-height-1{
+  line-height: 1;
+}
+.text-line-through{
+  text-decoration: line-through;
+}
+.text-lg-dark{
+  @include pc {
+    color: $dark !important;
+  }
+}
+.text-lg-gray-dark{
+  @include pc {
+    color: $gray-800 !important;
+  }
+}
+.text-md-white{
+  @include pad {
+    color: $white !important;
+  }
+}
+//background
+.bg-center{
+  background-position: center center;
+  background-size: cover;
+}
+//
+.w-md-auto{
+  @include pad {
+    width: auto !important;
+  }
+} 
+.w-md-50{
+  @include pad {
+    width: 50% !important;
+  }
+} 
+.w-md-60{
+  @include pad {
+    width: 60% !important;
+  }
+} 
+.w-md-75{
+  @include pad {
+    width: 75% !important;
+  }
+} 
+.w-md-100{
+  @include pad {
+    width: 100% !important;
+  }
+} 
+.h-md-auto{
+  @include pad {
+    height: auto !important;
+  }
+}
+.h-lg-100{
+  @include pc {
+    height: 100%;
+  }
+}
+.overflow-x-auto{
+  overflow-x: auto;
+}
+.link-hover-color.link-hover-color{
+  &:hover{
+    color: $primary !important;
+  }
+}
+.link-hover-color.active{
+    color: $primary !important;
+}
+
+.rounded-bottom-0 {
+  border-bottom-right-radius: 0rem !important;
+  border-bottom-left-radius: 0rem !important;
+}
+.rounded-top-0 {
+  border-top-left-radius: 0rem !important;
+  border-top-right-radius: 0rem !important;
+}

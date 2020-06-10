@@ -1,0 +1,53 @@
+//header
+.header{
+    height: 100vh;
+}
+.bg-header{
+    background-image: url('./../images/index-1.jpg');
+}
+.bg-lg-none{
+    @media (min-width: 992px){
+        background-image: none !important;
+    }
+}
+.menu-color{
+    color: $white;
+}
+//banner
+.banner{
+    height: 400px;
+}
+.bg-banner{
+    background-image: url('./../images/index-5.jpg');
+}
+.position-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+.position-btn{
+    @include pad{
+        position: absolute;
+        top: 68%;
+        transform: translateX(-50%);
+    }
+    @include pc{
+        transform: translateX(0);
+    }
+}
+//product-swiper
+.sale{
+    right: 0;
+}
+.product-img{
+    height: 240px;
+    object-fit: cover;
+    @media (min-width: 768px){
+        height: 300px;
+    }
+    @media (min-width: 992px){
+        height: 350px;
+    }
+}

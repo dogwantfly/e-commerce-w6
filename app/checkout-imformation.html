@@ -1,0 +1,281 @@
+---
+title: Imformation
+layout: ./app/layout-checkout.ejs
+engine: ejs
+current: index
+position: 
+theme: menu-color
+display: 
+col: 
+---
+
+<section class="imformation mb-md-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 order-lg-1"></div>
+            <div class="col-lg-1 order-lg-3"></div>
+            <div class="col-12 mb-5 col-lg-4 order-lg-5">
+                <a class="btn btn-secondary d-md-none d-block d-flex justify-content-between px-4 js-collapse" data-toggle="collapse" href="#multiCollapseCheckout" role="button" aria-expanded="false" aria-controls="multiCollapseCheckout">
+                    Order Summary
+                    <div class="d-flex">
+                        <span class="font-weight-bold js-pay">NT$4,760</span>
+                        <i href="#" class="material-icons text-primary ml-2 js-arrow">
+                            expand_more
+                        </i>
+                    </div>
+                </a>
+        
+                <div class="collapse multi-collapse" id="multiCollapseCheckout">
+                    <div class="card card-body  bg-secondary pb-4">
+                        <!-- 商品 -->
+                        <div class="media mb-2 mb-md-4">
+                            <img src="./assets/images/img-1.jpg" class="info-img-cover" alt="product image">
+                            <div class="media-body bg-secondary info-body-height">
+                                <div class="py-2 h-100">
+                                    <!-- 商品名稱 -->
+                                    <div class="d-flex justify-content-between align-items-center h-100">
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="mt-0 text-dark font-size-base font-weight-bold mb-1 mr-1 ml-4">Tatami Cup</h4>
+                                            <span>×1</span>
+                                        </div>
+                                        <!-- price -->
+                                        <span class="text-dark line-height-1">NT$1,080</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media mb-5">
+                        <img src="./assets/images/img-4.jpg" class="info-img-cover" alt="product image">
+                        <div class="media-body bg-secondary info-body-height">
+                            <div class="py-2 h-100">
+                                <!-- 商品名稱 -->
+                                <div class="d-flex justify-content-between align-items-center h-100">
+                                    <div class="d-flex align-items-center">
+                                        <h4 class="mt-0 text-dark font-size-base font-weight-bold mb-1 mr-1 ml-4">Baifan Bowl </h4>
+                                        <span>×2</span>
+                                    </div>
+                                    <!-- price -->
+                                     <span class="text-dark line-height-1">NT$3,600</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-end">
+                            <!-- subtotal -->
+                            <div class="d-flex justify-content-between text-dark mb-2 w-100 border-gray-700 border-top pt-4">
+                                <span>Subtotal</span>
+                                <span>NT$4,680</span>
+                            </div>
+                            <!-- shipping -->
+                            <div class="d-flex justify-content-between text-dark mb-5 w-100">
+                                <span>Shipping</span>
+                                <span>NT$80</span>
+                            </div>
+                            <!-- total -->
+                            <div class="d-flex justify-content-between font-weight-bold font-size-lg w-100 border-gray-700 border-top pt-4">
+                                <span>Total</span>
+                                <span>NT$4,760</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="col-12 col-lg-11 order-lg-2 mb-md-6">
+                <!-- 麵包屑 -->
+                <nav aria-label="breadcrumb" class="mb-5">
+                    <ol class="breadcrumb bg-white m-0 pb-0 pt-4 px-0">
+                        <li class="breadcrumb-item breadcrumb-item-arrow"><a href="#" class="text-primary" data-toggle="modal" data-target="#cartModal">Cart</a></li>
+                        <li class="breadcrumb-item breadcrumb-item-arrow"><a href="#" class="text-gray-dark font-weight-bold">Information</a></li>
+                        <li class="breadcrumb-item breadcrumb-item-arrow text-gray-dark" aria-current="page">Payment</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="col-12 col-lg-6 order-lg-4">
+                <!-- 表單 -->
+                <form>
+                    <!-- 聯絡資訊 -->
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" class="font-size-md">Contact information</label>
+                      <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <div class="form-group form-check mb-5">
+                        <label class="form-check-label pl-2 " for="checkbox">
+                            <input type="checkbox" class="checkbox" id="checkbox">
+                            <span class="checkmark "></span>
+                            Keep me up to date on news and special offers
+                        </label>
+                      </div>
+                    </div>
+                    <!-- 運送資訊 -->
+                    <div class="form-group">
+                      <label for="address" class="font-size-md">Shipping address</label>
+                      <!-- 姓名 -->
+                      <input type="text" class="form-control mb-2" id="address" placeholder="Name">
+                      <!-- 手機 -->
+                      <input type="tel" class="form-control mb-2" id="address" placeholder="Phone">
+                      <!-- 國家 / 地區 -->
+                      <select class="form-control mb-3 custom-select">
+                        <option selected>Country / Region</option>
+                        <option value="1">Taiwan</option>
+                        <option value="2">Japan</option>
+                        <option value="3">Korea</option>
+                      </select>
+                      <select class="form-control mb-3 custom-select">
+                        <option selected>City</option>
+                        <option value="1">Taipei</option>
+                        <option value="2">Tainan</option>
+                        <option value="3">Taitung</option>
+                      </select>
+                      <input type="text" class="form-control" id="address" placeholder="Address">
+                    </div>
+                    <div class="form-group d-md-flex">
+                        <a type="button" class="btn btn-primary w-100 w-md-50 font-weight-bold order-md-last" href="checkout-payment.html">Continue to payment</a>
+                        <button type="button" class="btn btn-transparent w-100 w-md-50  text-primary d-flex align-items-center justify-content-center"  data-toggle="modal" data-target="#cartModal">
+                            <span class="material-icons font-weight-bold">
+                                keyboard_arrow_left
+                            </span>
+                            Return to cart
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-1 order-lg-6"></div>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content h-100 h-md-auto">
+        <div class="modal-header ">
+            <h3 class="modal-title font-size-lg font-size-md-xl font-size-lg-xxl font-weight-bold" id="cartModalLabel">Cart List <sup class="text-primary">3</sup></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="material-icons font-size-lg-xxl">close</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!-- 購買的商品 -->
+            <div class="media mb-2">
+            <img src="./assets/images/img-1.jpg" class="media-img-cover" alt="product image">
+            <div class="media-body bg-secondary media-body-height">
+                <div class="container py-2">
+                <!-- 商品名稱 -->
+                <div class="d-flex justify-content-between">
+                    <h4 class="mt-0 text-dark font-size-md font-weight-bold mb-1">Tatami Cup</h4>
+                    <button class="btn btn-transparent p-0">
+                    <span class="material-icons">
+                        close
+                    </span>
+                    </button>
+                </div>
+                <!-- price -->
+                <div class="d-flex mb-3">
+                    <span class="text-dark mr-2 font-size-sm font-size-lg-base line-height-1">NT$1,080</span>
+                    <span class="text-gray-700 text-line-through font-size-sm font-size-lg-base line-height-1">NT$1,200</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <!-- 增加/減除數量 -->
+                    <div class="d-flex">
+                        <button class="btn btn-secondary p-0">
+                        <span class="material-icons d-block">
+                            remove
+                        </span>
+                        </button>
+                        <input type="number" name="" id="" class="product-amount bg-transparent ml-3" placeholder="1">
+                        <button class="btn btn-secondary p-0">
+                        <span class="material-icons d-block">
+                            add
+                        </span>
+                        </button>
+                    </div>
+                    <!-- 單品項總價錢 -->
+                    <span class="font-weight-bold">NT$1,080</span>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="media mb-5">
+            <img src="./assets/images/img-4.jpg" class="media-img-cover" alt="product image">
+            <div class="media-body bg-secondary media-body-height">
+                <div class="container py-2">
+                <!-- 商品名稱 -->
+                <div class="d-flex justify-content-between">
+                    <h4 class="mt-0 text-dark font-size-md font-weight-bold mb-1">Baifan Bowl</h4>
+                    <button class="btn btn-transparent p-0">
+                    <span class="material-icons">
+                        close
+                    </span>
+                    </button>
+                </div>
+                <!-- price -->
+                <div class="d-flex mb-3">
+                    <span class="text-dark mr-2 font-size-sm font-size-lg-base line-height-1">NT$1,800</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <!-- 增加/減除數量 -->
+                    <div class="d-flex">
+                        <button class="btn btn-secondary p-0">
+                        <span class="material-icons d-block">
+                            remove
+                        </span>
+                        </button>
+                        <input type="number" name="" id="" class="product-amount bg-transparent ml-3" placeholder="2">
+                        <button class="btn btn-secondary p-0">
+                        <span class="material-icons d-block">
+                            add
+                        </span>
+                        </button>
+                    </div>
+                    <!-- 單品項總價錢 -->
+                    <span class="font-weight-bold">NT$3,600</span>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="d-flex flex-column align-items-end mb-3">
+            <!-- subtotal -->
+            <div class="d-flex justify-content-between text-gray-dark mb-2  w-100">
+                <span>Subtotal</span>
+                <span>NT$4,680</span>
+            </div>
+            <!-- shipping -->
+            <div class="d-flex justify-content-between text-gray-dark mb-5  w-100">
+                <span>Shipping</span>
+                <span>NT80</span>
+            </div>
+            <!-- total -->
+            <div class="d-flex justify-content-between font-weight-bold font-size-lg  w-100">
+                <span>Total</span>
+                <span>NT$4,760</span>
+            </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a type="button" href="checkout-imformation.html" class="btn btn-primary w-100 w-md-75">Checkout</a>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="d-flex mb-9 order-lg-last mb-lg-0 border-gray-700 border-top pt-4 col-12 col-lg-11">
+                <!-- nav -->
+                <ul class="nav flex-column flex-md-row">
+                    <li class="ml-md-n4 ml-lg-n6">
+                    <a class="nav-link px-0 px-md-4 px-lg-5 text-gray-dark" href="#">Purchase Policy</a>
+                    </li>
+                    <li class="">
+                    <a class="nav-link px-0 px-md-4 px-lg-5 text-gray-dark" href="#">Privacy Policy</a>
+                    </li>
+                    <li class="">
+                    <a class="nav-link px-0 px-md-4 px-lg-5 mr-n5 text-gray-dark" href="#">Terms & Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

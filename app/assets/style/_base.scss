@@ -1,0 +1,36 @@
+*,*::before,*::after{
+    box-sizing: border-box; 
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+ul{
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+input ,textarea{
+    outline: none;
+    border-style: none;
+}
+
+[type=submit]{
+    cursor: pointer;
+    border: none;
+}
+select{
+    outline: none;
+    
+}
+a{
+    cursor: pointer;
+}
+main{
+    overflow-x: hidden;
+}
