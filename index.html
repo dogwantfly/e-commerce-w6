@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 作者 -->
+    <meta name="author" content="" />
+    <!-- 關鍵字 -->
+    <meta name="keywords" content="" />
+    <!-- 網頁說明 -->
+    <meta name="description" content="" />
+    <!-- 公司名稱 -->
+    <meta name="company" content="" />
+    <!-- 版權宣告 -->
+    <meta name="copyright" content="" />
+    <!-- 網站發佈地址 -->
+    <meta name="Distribution" content="" />
+    <!-- 分享的標題  -->
+    <meta property=" og:title" content="" />
+    <!-- 分享的內容敘述 -->
+    <meta property="og:description" content="" />
+    <!-- 分享的網頁連結 -->
+    <meta property="og:url" content="" />
+    <!--分享在 FB 的縮圖 -->
+    <meta property="og:image" content="" />
+
+    <link rel="shortcut icon" href="./assets/images/icon/shop.ico">
+    
+
+    <title>E-commerce</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- 編譯 css -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <!-- menu -->
+    <nav class="menu d-flex py-md-2 ">
+      <div class="menu-inner container d-flex justify-content-between  align-items-center">
+          <!-- ham -->
+          <button class="js-menu btn material-icons font-size-lg d-md-none ml-n3 py-4 color-white link-hover-color " >
+            menu
+          </button>
+          <!-- logo -->
+          <h1 class="logo mb-0 d-flex align-items-center">
+            <a href="index.html" class="font-family-raleway font-italic font-weight-black font-size-lg ">Crafsman</a>
+          </h1>
+          <div class="row">
+           <!-- nav -->
+            <ul class="js-nav nav justify-content-end" >
+              <!-- 手機版 nav-header -->
+              <div class="mx-4 d-flex justify-content-between d-md-none js-nav-header">
+                  <!-- 手機版 收合選單按鈕 -->
+                  <button class="btn btn-white js-nav-removed ml-n3">
+                    <i class="material-icons">
+                      arrow_back
+                      </i>
+                  </button>
+                  <!-- 手機版購物車按鈕 -->
+                  <button class="btn btn-white" data-toggle="modal" data-target="#cartModal">
+                    <i class="material-icons">
+                    shopping_cart
+                    </i>
+                  </button>
+              </div>
+              <!-- product(收合選單) -->
+              <li class="nav-item justify-content-between d-flex py-2 border-color-gray-700 mx-4 align-items-center js-nav-item-product d-md-none"  data-toggle="collapse" href="#collapseProduct" role="button" aria-expanded="false" aria-controls="collapseProduct">
+                <a class="nav-link mr-md-5 mr-0 font-size-lg font-size-md-base pl-0 pl-md-4" href="product.html">
+                  Product
+                </a>
+                <a href="#" class="nav-link material-icons d-md-none js-arrow">
+                  expand_more
+                </a>
+              </li>
+              <!-- 收合選單 -->
+              <ul class="collapse px-4 py-2 d-md-none" id="collapseProduct">
+                <li>
+                  <a href="product.html" class="py-2 text-gray-dark d-block">
+                    ALL
+                    <sup>24</sup>
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html" class="py-2 text-gray-dark d-block">
+                    BOWL
+                    <sup>10</sup>
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html" class="py-2 text-gray-dark d-block">
+                    CUP
+                    <sup>8</sup>
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html" class="py-2 text-gray-dark d-block">
+                    PLATE
+                    <sup>3</sup>
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html" class="py-2 text-gray-dark d-block">
+                    VASE
+                    <sup>3</sup>
+                  </a>
+                </li>
+              </ul>
+              <!-- pc/pad nav-item -->
+              <li class="nav-item py-2 border-color-gray-700 mx-4 d-none d-md-block">
+                <a class="nav-link mr-md-5 mr-0 font-size-lg font-size-md-base pl-0 pl-md-4 link-hover-color " href='product.html'>Product</a>
+              </li>
+              <li class="nav-item py-2 border-color-gray-700 mx-4 js-nav-item">
+                <a class="nav-link mr-md-5 mr-0 font-size-lg font-size-md-base pl-0 pl-md-4 link-hover-color " href="#">Blog</a>
+              </li>
+              <li class="nav-item py-2 border-color-gray-700 mx-4 js-nav-item">
+                <a class="nav-link mr-md-5 mr-0 font-size-lg font-size-md-base pl-0 pl-md-4 link-hover-color " href="#">Contact</a>
+              </li>
+            </ul>
+            <!-- pc / pad cart-icon --> <!-- Button trigger modal -->
+            <button class="btn color-white  link-hover-color" data-toggle="modal" data-target="#cartModal">
+              <i class="material-icons">
+              shopping_cart
+              </i>
+            </button>
+          </div>
+      </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content h-100 h-md-auto">
+          <div class="modal-header ">
+            <h3 class="modal-title font-size-lg font-size-md-xl font-size-lg-xxl font-weight-bold" id="cartModalLabel">Cart List <sup class="text-primary">3</sup></h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="material-icons font-size-lg-xxl">close</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- 購買的商品 -->
+            <div class="media mb-2">
+              <img src="./assets/images/img-1.jpg" class="media-img-cover" alt="product image">
+              <div class="media-body bg-secondary media-body-height">
+                <div class="container py-2">
+                  <!-- 商品名稱 -->
+                  <div class="d-flex justify-content-between">
+                    <h4 class="mt-0 text-dark font-size-md font-weight-bold mb-1">Tatami Cup</h4>
+                    <button class="btn btn-transparent p-0">
+                      <span class="material-icons">
+                        close
+                      </span>
+                    </button>
+                  </div>
+                  <!-- price -->
+                  <div class="d-flex mb-3">
+                    <span class="text-dark mr-2 font-size-sm font-size-lg-base line-height-1">NT$1,080</span>
+                    <span class="text-gray-700 text-line-through font-size-sm font-size-lg-base line-height-1">NT$1,200</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <!-- 增加/減除數量 -->
+                    <div class="d-flex">
+                        <button class="btn btn-secondary p-0">
+                          <span class="material-icons d-block">
+                            remove
+                          </span>
+                        </button>
+                        <input type="number" name="" id="" class="product-amount bg-transparent ml-3" placeholder="1">
+                        <button class="btn btn-secondary p-0">
+                          <span class="material-icons d-block">
+                            add
+                          </span>
+                        </button>
+                    </div>
+                    <!-- 單品項總價錢 -->
+                    <span class="font-weight-bold">NT$1,080</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="media mb-5">
+              <img src="./assets/images/img-4.jpg" class="media-img-cover" alt="product image">
+              <div class="media-body bg-secondary media-body-height">
+                <div class="container py-2">
+                  <!-- 商品名稱 -->
+                  <div class="d-flex justify-content-between">
+                    <h4 class="mt-0 text-dark font-size-md font-weight-bold mb-1">Baifan Bowl</h4>
+                    <button class="btn btn-transparent p-0">
+                      <span class="material-icons">
+                        close
+                      </span>
+                    </button>
+                  </div>
+                  <!-- price -->
+                  <div class="d-flex mb-3">
+                    <span class="text-dark mr-2 font-size-sm font-size-lg-base line-height-1">NT$1,800</span>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <!-- 增加/減除數量 -->
+                    <div class="d-flex">
+                        <button class="btn btn-secondary p-0">
+                          <span class="material-icons d-block">
+                            remove
+                          </span>
+                        </button>
+                        <input type="number" name="" id="" class="product-amount bg-transparent ml-3" placeholder="2">
+                        <button class="btn btn-secondary p-0">
+                          <span class="material-icons d-block">
+                            add
+                          </span>
+                        </button>
+                    </div>
+                    <!-- 單品項總價錢 -->
+                    <span class="font-weight-bold">NT$3,600</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-end mb-3">
+              <!-- subtotal -->
+              <div class="d-flex justify-content-between text-gray-dark mb-2 w-md-75 w-100">
+                <span>Subtotal</span>
+                <span>NT$4,680</span>
+              </div>
+              <!-- shipping -->
+              <div class="d-flex justify-content-between text-gray-dark mb-5 w-md-75 w-100">
+                <span>Shipping</span>
+                <span>NT80</span>
+              </div>
+              <!-- total -->
+              <div class="d-flex justify-content-between font-weight-bold font-size-lg w-md-75 w-100">
+                <span>Total</span>
+                <span>NT$4,760</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a type="button" href="checkout-imformation.html" class="btn btn-primary w-100 w-md-75 font-weight-bold">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    
+    
+    <!-- main -->
+    <main class="main">
+        
+
+  <!-- header-->
+  <div class="container-lg">
+    <header class="header flex-nowrap mb-11 row">
+      <!-- header title -->
+      <div class="col-lg-6  d-flex bg-header bg-center bg-lg-none justify-content-center justify-content-lg-start col-12 align-items-end">
+        <div class="text-center text-lg-left w-100 container">
+          <div class="position-center ">
+            <h2 class="font-weight-bold font-size-xxl mb-5 text-white text-lg-dark">Enjoy Your <br> Minimalist Lifestyle.</h2>
+            <p class="text-gray-light text-lg-gray-dark font-size-lg-lg mb-9 ">The best crafts in Taiwan. Get your free <br> shipping on the first order.</p>
+          </div>
+          <a class="btn btn-primary w-100 w-md-auto px-md-11 mb-5 mb-md-11 ml-lg-n6 position-btn" href="product.html">Shop now</a>
+        </div>
+      </div>
+      <div class="col-lg-12 bg-header bg-center d-none d-lg-block"></div>
+    </header>
+  </div>
+  <!-- feature -->
+  <section class="feature mb-11">
+    <div class="container">
+      <ul class="list mb-0 row">
+        <li class="mb-md-6 col-12 mb-5">
+          <div class="row">
+            <div class="col-md-6 col-12 mb-4 mb-md-0">
+              <img src="./assets/images/index-2.jpg" alt="feature image">
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="row h-100 align-items-center justify-content-center">
+                <div  class="col-lg-8 col-12">
+                  <h3 class="font-weight-bold font-size-lg mb-4">Special Clays</h3>
+                  <p class="text-gray-dark mb-5">
+                    A general body formulation for contemporary   earthenware is 25% kaolin, 25% ball clay, 35%   quartz and 15% feldspar.
+                  </p>
+                  <a class="text-primary py-5 font-weight-bold">learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="mb-md-6 col-12 mb-5">
+          <div class="row">
+            <div class="col-md-6 col-12 d-flex text-md-right  order-last order-md-first">
+              <div class="row h-100 align-items-center justify-content-center">
+                <div  class="col-lg-8 col-12">
+                  <h3 class="font-weight-bold font-size-lg mb-4">Less is more</h3>
+                  <p class="text-gray-dark ">
+                    Trimming pottery can transform a weighty Earth- bound pot into one that is a pleasure to hold, look  at, and use.
+                  </p>
+                  <a class="text-primary py-5 font-weight-bold">learn more</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-12 mb-4 mb-md-0">
+              <img src="./assets/images/index-3.jpg" alt="feature image">
+            </div>
+          </div>
+        </li>
+        <li class="mb-md-6 col-12">
+          <div class="row">
+            <div class="col-md-6 col-12 mb-4 mb-md-0">
+              <img src="./assets/images/index-4.jpg" alt="feature image">
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-lg-8 col-12">
+                  <h3 class="font-weight-bold font-size-lg mb-4">Marvelous Detail</h3>
+                  <p class="text-gray-dark">
+                    In Craftsman, the art director, working with  marketers, develops or creates an idea of a new  creation.
+                  </p>
+                  <a class="text-primary py-5 font-weight-bold">learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+<!-- banner -->
+<section class="banner bg-banner bg-center mb-11">
+  <div class="container h-100">
+    <div class="row h-100 justify-content-between">
+      <div class="col-md-4 col-12 d-flex align-items-center h-lg-100">
+        <h2 class="text-white font-weight-bold font-size-xl">“I want to make the life more simple by crafts.”</h2>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-12 d-flex align-items-center h-lg-100">
+        <div>
+          <span class="text-gray-light mb-1">Art Director</span>
+          <h3 class="text-white line-height-1">hsiao-Ming Chen</h3>
+          <a href="#" class="text-primary py-5 mr-5 font-weight-bold">Instagram</a>
+          <a href="#" class="text-primary py-5 font-weight-bold">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- swiper -->
+<section class="product-swiper mb-11">
+  
+  <!-- Swiper -->
+  <div class="container">
+    <div class="swiper-container vw-100">
+
+      <div class="swiper-wrapper">
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <span class="sale position-absolute font-size-sm text-white font-weight-bold mr-4 mt-4">On Sale</span>
+          <img src="./assets/images/img-1.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Tatami Cup</h3>
+            <span class="text-dark mr-2">NT$1,080</span>
+            <span class="text-gray-700 text-line-through">NT$1,200</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-2.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Couple Collection</h3>
+            <span class="text-dark mr-2">NT$2800</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-3.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Brotherhood Vase</h3>
+            <span class="text-dark mr-2">NT$4,800</span>
+          </div>
+        </a>
+        
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-4.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Baifan Bowl</h3>
+            <span class="text-dark mr-2">NT$1,800</span>
+            <span class="text-gray-700 text-line-through">NT$1,980</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-5.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Hana Vase</h3>
+            <span class="text-dark mr-2">NT$3,600</span>
+            <span class="text-gray-700 text-line-through">NT$3,880</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-6.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Limdae Cup</h3>
+            <span class="text-dark mr-2">NT$2,400</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-7.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Ceramic Vase</h3>
+            <span class="text-dark mr-2">NT$3,600</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-8.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Kabi Mug</h3>
+            <span class="text-dark mr-2">NT$980</span>
+          </div>
+        </a>
+  
+        <a href="product-detail.html" class="swiper-slide position-relative d-block">
+          <img src="./assets/images/img-9.jpg" alt="product image" class="product-img mb-2">
+          <div class="info">
+            <h3 class="text-dark font-size-lg font-weight-bold mb-1">Shiro Plate</h3>
+            <span class="text-dark mr-2">NT$1,200</span>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  
+</section>
+
+    </main>
+    <!-- subscribe -->
+    <section class="subscribe bg-subscribe bg-center">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-5 col-md-6 col-12 d-flex justify-content-center flex-column h-100">
+            <h2 class="font-weight-bold text-white font-size-md-xxl font-size-xl mb-9">Subscribe for news  and special offers!</h2>
+            <div class="input-group">
+              <input type="text" class="form-control border-gray-light placeholder-light" placeholder="Your email address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append ">
+                <button class="btn btn-primary px-lg-8 px-md-6 px-5 border-top border-bottom border-primary">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer bg-dark py-lg-6 py-5">
+      <div class="container">
+        <div class="row align-items-lg-center">
+          <div class="col-12 col-lg-2 mb-9 mb-lg-0">
+            <h2 class="logo text-md-center text-lg-left">
+              <a href="index.html" class="font-family-raleway font-size-lg text-white mb-0 ">
+                Crafsman
+              </a>
+            </h2>
+          </div>
+          
+          <div class="col-12 col-lg-7 d-flex justify-content-lg-end justify-content-md-center mb-9 order-lg-last mb-lg-0">
+            <!-- nav -->
+            <ul class="nav flex-column flex-md-row">
+              <li class="nav-item">
+                <a class="nav-link px-0 px-md-4 px-lg-5 text-gray-400" href="#">Purchase Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 px-md-4 px-lg-5 text-gray-400" href="#">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-0 px-md-4 px-lg-5 mr-n5 text-gray-400" href="#">Terms & Conditions</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <span class="text-gray-light text-md-center text-lg-left d-block pr-4 pr-lg-0 ml-lg-n8">© 2020. All Rights Reserved.</span>
+          </div>
+          
+        </div>
+      </div>
+      
+    </footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+    
+  </body>
+
+</html>

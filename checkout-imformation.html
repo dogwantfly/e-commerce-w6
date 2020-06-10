@@ -1,14 +1,66 @@
----
-title: Payment
-layout: ./app/layout-checkout.ejs
-engine: ejs
-current: index
-position: 
-theme: menu-color
-display: 
-col: 
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 作者 -->
+    <meta name="author" content="" />
+    <!-- 關鍵字 -->
+    <meta name="keywords" content="" />
+    <!-- 網頁說明 -->
+    <meta name="description" content="" />
+    <!-- 公司名稱 -->
+    <meta name="company" content="" />
+    <!-- 版權宣告 -->
+    <meta name="copyright" content="" />
+    <!-- 網站發佈地址 -->
+    <meta name="Distribution" content="" />
+    <!-- 分享的標題  -->
+    <meta property=" og:title" content="" />
+    <!-- 分享的內容敘述 -->
+    <meta property="og:description" content="" />
+    <!-- 分享的網頁連結 -->
+    <meta property="og:url" content="" />
+    <!--分享在 FB 的縮圖 -->
+    <meta property="og:image" content="" />
+
+    <link rel="shortcut icon" href="./assets/images/icon/shop.ico">
+    
+
+    <title>Imformation</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- 編譯 css -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-1 "></div>
+        <div class="col-12 col-lg-11  ">
+          <!-- logo -->
+          <h1 class="logo mb-0 d-flex align-items-center">
+            <a href="index.html" class="font-family-raleway font-italic font-weight-black font-size-lg  menu-color  py-5">Crafsman</a>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+   
+    
+    
+    <!-- main -->
+    <main class="main">
+        
 <section class="imformation mb-md-6">
     <div class="container">
         <div class="row">
@@ -86,66 +138,57 @@ col:
                 <nav aria-label="breadcrumb" class="mb-5">
                     <ol class="breadcrumb bg-white m-0 pb-0 pt-4 px-0">
                         <li class="breadcrumb-item breadcrumb-item-arrow"><a href="#" class="text-primary" data-toggle="modal" data-target="#cartModal">Cart</a></li>
-                        <li class="breadcrumb-item breadcrumb-item-arrow"><a href="checkout-imformation.html" class="text-gray-dark">Information</a></li>
-                        <li class="breadcrumb-item breadcrumb-item-arrow text-gray-dark" aria-current="page"><a href="#" class="text-gray-dark font-weight-bold">Payment</a></li>
+                        <li class="breadcrumb-item breadcrumb-item-arrow"><a href="#" class="text-gray-dark font-weight-bold">Information</a></li>
+                        <li class="breadcrumb-item breadcrumb-item-arrow text-gray-dark" aria-current="page">Payment</li>
                     </ol>
                 </nav>
             </div>
+
             <div class="col-12 col-lg-6 order-lg-4">
                 <!-- 表單 -->
                 <form>
                     <!-- 聯絡資訊 -->
-                    <div class="form-group mb-md-6">
-                        <!-- 運送與聯絡資訊 -->
-                        <label class="font-size-md mb-2">Information</label>
-                        <!-- 折疊選單 -->
-                        <ul>
-                            <!-- contact -->
-                            <li class="card w-100 border border-gray-700 rounded-bottom-0 border-bottom-0">
-                                <div class="card-header btn btn-transparent  text-left d-flex justify-content-between border-bottom-0 bg-white js-collapse-contact py-4 py-lg-5" type="button" data-toggle="collapse" data-target="#collapseContact" aria-expanded="true" aria-controls="collapseContact">
-                                    Contact
-                                    <span class="text-gray-dark d-md-none js-contact-detail font-size-sm"> Joanne@mail.com…</span>
-                                    <span class="text-gray-dark d-none d-md-flex js-contact-detail font-size-sm ml-2">Joanne Lin / Joanne@mail.com / +886 912-345-678</span>
-                                    <i href="#" class="material-icons text-primary ml-2 js-expanded-contact">
-                                        expand_more
-                                    </i>
-                                </div>
-                                <div class="card-body text-gray-dark collapse" id="collapseContact">
-                                    Joanne Lin <br> Joanne@mail.com <br> +886 912-345-678
-                                </div>
-                            </li>
-                            <!-- ship to -->
-                            <li class="card w-100 border border-gray-700 rounded-top-0">
-                                <div class="card-header btn btn-transparent  text-left d-flex justify-content-between border-bottom-0 bg-white js-collapse-ship py-4 py-lg-5 text-nowrap" type="button" data-toggle="collapse" data-target="#collapseShip" aria-expanded="true" aria-controls="collapseShip">
-                                    Ship to
-                                    <span class="text-gray-dark d-md-none js-contact-detail font-size-sm"> 3F., No. 2, Ln. 1, Hello 2nd…</span>
-                                    <span class="text-gray-dark d-none d-md-flex js-ship-detail font-size-sm ml-2 text-wrap">3F., No. 2, Ln. 1, Hello 2nd Rd., Woohoo Dist., Kaohsiung…</span>
-                                    <i href="#" class="material-icons text-primary ml-2 js-expanded-ship">
-                                        expand_more
-                                    </i>
-                                </div>
-                                <div class="card-body text-gray-dark collapse" id="collapseShip">
-                                    3F., No. 2, Ln. 1, Hello 2nd Rd., <br> Woohoo Dist., Kaohsiung City 806, <br> Taiwan
-                                </div>
-                            </li>
-                        </ul>
-                    </div>    
-                    <!-- 信用卡 -->
                     <div class="form-group">
-                        <label class="font-size-md mb-2">Credit Card</label>
-                        <input type="number" class="form-control mb-3" placeholder="Card number">
-                        <input type="text" class="form-control mb-3" placeholder="Name on card">
-                        <input type="datetime" class="form-control mb-3" placeholder="Expiration date (MM / YY)">
-                        <input type="number" class="form-control mb-3" placeholder="Security code">
-                    </div>    
+                      <label for="exampleInputEmail1" class="font-size-md">Contact information</label>
+                      <input type="email" class="form-control mb-3" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <div class="form-group form-check mb-5">
+                        <label class="form-check-label pl-2 " for="checkbox">
+                            <input type="checkbox" class="checkbox" id="checkbox">
+                            <span class="checkmark "></span>
+                            Keep me up to date on news and special offers
+                        </label>
+                      </div>
+                    </div>
+                    <!-- 運送資訊 -->
+                    <div class="form-group">
+                      <label for="address" class="font-size-md">Shipping address</label>
+                      <!-- 姓名 -->
+                      <input type="text" class="form-control mb-2" id="address" placeholder="Name">
+                      <!-- 手機 -->
+                      <input type="tel" class="form-control mb-2" id="address" placeholder="Phone">
+                      <!-- 國家 / 地區 -->
+                      <select class="form-control mb-3 custom-select">
+                        <option selected>Country / Region</option>
+                        <option value="1">Taiwan</option>
+                        <option value="2">Japan</option>
+                        <option value="3">Korea</option>
+                      </select>
+                      <select class="form-control mb-3 custom-select">
+                        <option selected>City</option>
+                        <option value="1">Taipei</option>
+                        <option value="2">Tainan</option>
+                        <option value="3">Taitung</option>
+                      </select>
+                      <input type="text" class="form-control" id="address" placeholder="Address">
+                    </div>
                     <div class="form-group d-md-flex">
-                        <a type="button" class="btn btn-primary w-100 w-md-50 font-weight-bold order-md-last" href="checkout-done.html">Pay now</a>
-                        <a type="button" class="btn btn-transparent w-100 w-md-50 text-primary d-flex align-items-center justify-content-center justify-content-md-start" href="checkout-imformation.html">
+                        <a type="button" class="btn btn-primary w-100 w-md-50 font-weight-bold order-md-last" href="checkout-payment.html">Continue to payment</a>
+                        <button type="button" class="btn btn-transparent w-100 w-md-50  text-primary d-flex align-items-center justify-content-center"  data-toggle="modal" data-target="#cartModal">
                             <span class="material-icons font-weight-bold">
                                 keyboard_arrow_left
                             </span>
-                            Return to information
-                        </a>
+                            Return to cart
+                        </button>
                     </div>
                 </form>
             </div>
@@ -288,3 +331,22 @@ col:
         </div>
     </div>
 </footer>
+    </main>
+
+    <style>
+      .menu{
+          position: relative;
+      }
+      .menu-color.menu-color{
+          color: #121212;
+      }
+      .menu-color-dark{
+          color: #121212;
+      }
+    </style>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+    
+  </body>
+
+</html>
