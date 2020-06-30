@@ -96,7 +96,12 @@ function clean() {
     .pipe($.clean());
 }
 
+// function deploy() {
+//   return gulp.src(envOptions.deploySrc)
+//     .pipe($.ghPages());
+// }
 function deploy() {
+  console.log(envOptions.deploySrc);
   return gulp.src(envOptions.deploySrc)
     .pipe($.ghPages());
 }
